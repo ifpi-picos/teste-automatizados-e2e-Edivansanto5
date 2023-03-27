@@ -37,3 +37,44 @@ await page.locator('#id_password').fill('senha1234');
 await page.getByRole('button', { name: ' Salvar' }).click();
 await page.getByText('Usuário com este Matricula já existe.').click();
 });
+
+// Ao chegar na linha 53 vai apresentar erro pq ele nao acha o arquivo que esta somente em meu pc
+test(' E-mail já existe',async({page})=>{
+await page.goto('https://refeitorio.picos.ifpi.edu.br/');
+await page.getByText('☰').click();
+await page.getByRole('link', { name: 'Cadastre-se' }).click();
+await page.locator('#id_username').click();
+await page.locator('#id_username').fill('matriculanova');
+await page.locator('#id_name').click();
+await page.locator('#id_name').fill('teste novo');
+await page.locator('#id_email').click();
+await page.locator('#id_email').fill('edivansantos1478@gmail.com');
+await page.locator('#id_photo').click();
+await page.locator('#id_photo').setInputFiles('download.jpeg');
+await page.locator('#id_curso').selectOption('9');
+await page.locator('#id_password').click();
+await page.locator('#id_password').fill('222222222');
+await page.getByRole('button', { name: ' Salvar' }).click();
+await page.getByText('Usuário com este E-mail já existe.').click();
+});
+
+
+test(' E-mail invalido',async({page})=>{
+await page.goto('https://refeitorio.picos.ifpi.edu.br/');
+await page.getByText('☰').click();
+await page.getByRole('link', { name: 'Cadastre-se' }).click();
+await page.locator('#id_username').click();
+await page.locator('#id_username').fill('tetseadadaafdad');
+await page.locator('#id_name').click();
+await page.locator('#id_name').fill('fsggffggg');
+await page.locator('#id_email').click();
+await page.locator('#id_email').fill('edivansantos1478@gmail.com');
+await page.locator('#id_photo').click();
+await page.locator('#id_photo').setInputFiles('download.jpeg');
+await page.locator('#id_curso').selectOption('9');
+await page.locator('#id_password').click();
+await page.locator('#id_password').fill('3565647646');
+await page.getByRole('button', { name: ' Salvar' }).click();
+await page.getByText('Usuário com este E-mail já existe.').click();
+});
+  
