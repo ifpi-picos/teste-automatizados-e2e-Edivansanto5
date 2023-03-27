@@ -79,9 +79,7 @@ await page.getByRole('button', { name: ' Salvar' }).click();
 
 });
 
-
-
-// Ao chegar na linha 96 vai apresentar erro pq ele nao acha o arquivo que esta somente em meu pc
+// Ao chegar na linha 94 vai apresentar erro pq ele nao acha o arquivo que esta somente em meu pc
 test('Campos preenchidos corretamente',async({page})=>{
 await page.goto('https://refeitorio.picos.ifpi.edu.br/');
 await page.getByText('☰').click();
@@ -100,6 +98,25 @@ await page.locator('#id_password').fill('12321456');
 await page.getByRole('button', { name: ' Salvar' }).click();
 await page.getByText('Aluno sabrina cadastrado com sucesso').click();
   
+});
+
+test('Foto Obrigatorio',async({page})=>{
+   await page.goto('https://refeitorio.picos.ifpi.edu.br/');
+   await page.getByText('☰').click();
+   await page.getByRole('link', { name: 'Cadastre-se' }).click();
+   await page.locator('#id_username').click();
+   await page.locator('#id_username').fill('mariajubileu@gmail.com');
+   await page.locator('#id_name').click();
+   await page.locator('#id_name').fill('jubileu');
+   await page.locator('#id_email').click();
+   await page.locator('#id_username').click();
+   await page.locator('#id_username').fill('mariajubileu');
+   await page.locator('#id_email').click();
+   await page.locator('#id_email').fill('Jubileu@gmail.com');
+   await page.locator('#id_curso').selectOption('9');
+   await page.locator('#id_password').click();
+   await page.locator('#id_password').fill('jujuju');
+   await page.getByRole('button', { name: ' Salvar' }).click(); 
 });
 
 
