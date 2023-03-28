@@ -28,7 +28,7 @@ Feature: Cadastro de Usuario
     
     Scenario:' E-mail já existente'
         Given que eu esteja na tela de Cadastro
-        And ao adicionando Matricula
+        And adicionando Matricula
         And adicionando Nome 
         And adicionando email que ja estar cadastrado no sistema
         And adicionando foto 
@@ -37,4 +37,14 @@ Feature: Cadastro de Usuario
         When eu clicar no Botão Salvar
         Then vou receber uma menssagem que esse email ja existe, e não vai ser criado o Usuario
 
-        
+    
+    Scenario:'E-Mail é inválido'
+        Given que eu esteja na tela de Cadastro
+        And adicionando Matricula
+        And adicionando Nome 
+        And adicionando email inválido
+        And adicionando foto 
+        And adicionando nome do Curso
+        And adicionando a senha 
+        When eu clicar no Botão Salvar
+        Then vou receber uma menssagem que esse email invalidos/incompleto    
