@@ -24,6 +24,17 @@ Feature: Cadastro de Usuario
         And adicionando nome do Curso
         And adicionando a senha 
         When eu clicar no Botão Salvar
-        Then vou receber uma menssagem que esse email ja exixte, e não vai ser criado o Usuario
+        Then vou receber uma menssagem que esse Matricula ja existe, e não vai ser criado o Usuario
     
-'  
+    Scenario:' E-mail já existente'
+        Given que eu esteja na tela de Cadastro
+        And ao adicionando Matricula
+        And adicionando Nome 
+        And adicionando email que ja estar cadastrado no sistema
+        And adicionando foto 
+        And adicionando nome do Curso
+        And adicionando a senha 
+        When eu clicar no Botão Salvar
+        Then vou receber uma menssagem que esse email ja existe, e não vai ser criado o Usuario
+
+        
