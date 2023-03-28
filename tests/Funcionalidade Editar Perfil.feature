@@ -18,3 +18,10 @@ Feature: Editar Perfil
         And Clicar no Botão Salvar 
         Then vai ser modificado o Nome do Curso, e vou receber uma menssagem de sucesso
     
+    Scenario:'Editar foto de Perfil'
+        Given que eu esteja na Tela de Editar Perfil
+        And queira alterar a Imagem de perfil
+        When eu selecionar a imagem desejada
+        And Clicar no Botão Salvar 
+        Then a Imagem de perfil vai ser atualizada, e vou receber uma menssagem de sucesso
+    
