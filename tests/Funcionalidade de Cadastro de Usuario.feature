@@ -59,3 +59,15 @@ Feature: Cadastro de Usuario
         And adicionando a senha 
         When eu clicar no Botão Salvar
         Then vou receber uma menssagem de selecione um arquivo  
+
+    Scenario:'Campos Preenchido Corretamente' 
+        Given que eu esteja na tela de Cadastro
+        And adicionando minha Matricula válida
+        And adicionando meu Nome 
+        And adicionando meu email válido
+        And adicionando minha foto de perfil
+        And adicionando nome do Curso
+        And adicionando a senha 
+        When eu clicar no Botão Salvar
+        Then vou receber uma Menssagem de Usuario criado com sucesso
+    
