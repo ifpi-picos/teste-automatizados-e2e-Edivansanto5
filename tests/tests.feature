@@ -33,6 +33,13 @@ Feature: LOGIN NO SISTEMA
     Scenario:' Login com  campos da senha vazios'
         Given que eu esteja na tela de login
         And quando eu não coloco a matricula/email
-        And nao colocar a senha 
-        When quando eu Clicar no Botão login
+        And  colocar a senha 
+        When eu Clicar no Botão login
+        Then vou receber uma menssagem de campo obrigatorio e nao vou entrar no sistema
+
+    Scenario: 'Login com  campos Matricula/email vazios'
+        Given que eu esteja na tela de login
+        And quando eu adicionar minha matricula/email
+        And quando eu não adicionar a senha
+        When eu Clicar no Botão login
         Then vou receber uma menssagem de campo obrigatorio e nao vou entrar no sistema
