@@ -15,4 +15,15 @@ Feature: Cadastro de Usuario
         When eu clicar no Botão Salvar
         Then vou receber uns avisos de campos Obrigatórios, e nao vai ser criado o Usuario
     
-    Scenario:''  
+    Scenario:'Matrícula já existe'
+        Given que eu esteja na tela de Cadastro
+        And ao adicionar uma  Matricula que ja esteja cadastrado no sistema
+        And adicionando Nome 
+        And adicionando email válidos 
+        And adicionando foto 
+        And adicionando nome do Curso
+        And adicionando a senha 
+        When eu clicar no Botão Salvar
+        Then vou receber uma menssagem que esse email ja exixte, e não vai ser criado o Usuario
+    
+'  
