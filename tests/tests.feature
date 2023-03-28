@@ -16,3 +16,9 @@ Feature: LOGIN NO SISTEMA
         When eu clicar no Botão login
         Then deve apresentar uma mensagem de erro, e não posso entra no sistema
 
+    Scenario:'Login com matricula/e-mail inválidos'
+        Given dado que eu esteja na tela de login
+        And ao adicionar matricula/email invalidos
+        And ao adicionar senha inválidos e 
+        When eu Clicar no Botão login
+        Then vou receber uma mensagem de erro e não vou entrar no sistema
