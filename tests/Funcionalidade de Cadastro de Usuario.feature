@@ -48,3 +48,14 @@ Feature: Cadastro de Usuario
         And adicionando a senha 
         When eu clicar no Botão Salvar
         Then vou receber uma menssagem que esse email invalidos/incompleto    
+
+    Scenario:'foto obrigatório'
+        Given que eu esteja na tela de Cadastro
+        And adicionando Matricula válidos
+        And adicionando Nome 
+        And adicionando email válidos
+        And não adicionando foto 
+        And adicionando nome do Curso
+        And adicionando a senha 
+        When eu clicar no Botão Salvar
+        Then vou receber uma menssagem de selecione um arquivo  
