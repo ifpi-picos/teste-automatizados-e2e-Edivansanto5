@@ -10,15 +10,22 @@ Feature: LOGIN NO SISTEMA
         Then vou ser redirecionado para a tela Principal do sistema
 
     Scenario: 'Login no sistema com email/matrícula senha sem cadastro'
-        Given dado que esteja na tela de login
+        Given que esteja na tela de login
         And ao adicionar email/matricula sem estar cadastrado no sistema
         And ao adicionar senha sem estar cadastrado
         When eu clicar no Botão login
         Then deve apresentar uma mensagem de erro, e não posso entra no sistema
 
     Scenario:'Login com matricula/e-mail inválidos'
-        Given dado que eu esteja na tela de login
+        Given que eu esteja na tela de login
         And ao adicionar matricula/email invalidos
         And ao adicionar senha inválidos e 
         When eu Clicar no Botão login
         Then vou receber uma mensagem de erro e não vou entrar no sistema
+
+    Scenario: Login com senha inválida
+        Given que esteja na tela de login
+        And quando eu adicionar minha matricula/email
+        And quando eu adicionar minha Senha inválida
+        When eu clicar no botão login
+        Then vou receber uma mensagem de erro, e nao vou entar no sistema
