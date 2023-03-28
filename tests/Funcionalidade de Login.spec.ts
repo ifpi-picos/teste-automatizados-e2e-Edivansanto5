@@ -2,14 +2,33 @@
 const { test, expect } = require('@playwright/test');
 
 test('Login no sistema com matricula/email e senha já com cadastros', async ({ page }) => {
-    await page.goto('https://refeitorio.picos.ifpi.edu.br/');
-    await page.getByText('☰').click();
-    await page.getByRole('link', { name: 'Login' }).click();
-    await page.getByPlaceholder('Usuário').click();
-    await page.getByPlaceholder('Usuário').fill('20191tads0326');
-    await page.getByPlaceholder('Senha').click();
-    await page.getByPlaceholder('Senha').fill('06111994');
-    await page.getByRole('button', { name: 'Login' }).click();
+   await page.goto('https://refeitorio.picos.ifpi.edu.br/');
+   await page.waitForTimeout(2000)
+   await page.getByText('☰').click();
+   await page.waitForTimeout(2000)
+   await page.getByRole('link', { name: 'Login' }).click();
+   await page.waitForTimeout(2000)
+   await page.getByPlaceholder('Usuário').click();
+   await page.waitForTimeout(2000)
+   await page.getByPlaceholder('Usuário').fill('2020fisica2020');
+   await page.waitForTimeout(2000)
+   await page.getByPlaceholder('Senha').click();
+   await page.waitForTimeout(2000)
+   await page.getByPlaceholder('Senha').fill('fisica2020');
+   await page.waitForTimeout(2000)
+   await page.getByRole('button', { name: 'Login' }).click();
+   await page.waitForTimeout(2000)
+   await page.getByPlaceholder('Usuário').click();
+   await page.waitForTimeout(2000)
+   await page.getByPlaceholder('Usuário').fill('20191tads0326');
+   await page.waitForTimeout(2000)
+   await page.getByPlaceholder('Senha').click();
+   await page.waitForTimeout(2000)
+   await page.getByPlaceholder('Senha').fill('06111994');
+   await page.waitForTimeout(2000)
+   await page.getByRole('button', { name: 'Login' }).click();
+   
+ 
 });
 
 test(' Login no sistema com email/matrícula senha sem cadastro',async({page})=>{
