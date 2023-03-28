@@ -4,15 +4,15 @@ Feature: Cadastro de Usuario
     preciso me cadastrar no Sistema
     para ter acesso ao Sistema
 
-   Scenario:'Campos Obrigatórios' 
+    Scenario:'Campos Obrigatórios' 
         Given que eu esteja na tela de Cadastro
-        And adicionando Matricula válidos
-        And adicionando Nome 
-        And adicionando email válidos
-        And adicionando foto 
-        And adicionando nome do Curso
-        And adicionando a senha 
+        And não adicionando Matricula 
+        And não adicionando Nome 
+        And não adicionando email 
+        And não adicionando foto 
+        And não adicionando nome do Curso
+        And não adicionando a senha 
         When eu clicar no Botão Salvar
-        Then vai ser criado um cadastro, e vai mostrar uma menssagem de usuario cadastrado com sucesso
+        Then vou receber uns avisos de campos Obrigatórios, e nao vai ser criado o Usuario
     
-    
+    Scenario:''  
