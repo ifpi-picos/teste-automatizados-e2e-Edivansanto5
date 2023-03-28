@@ -27,5 +27,12 @@ Feature: LOGIN NO SISTEMA
         Given que esteja na tela de login
         And quando eu adicionar minha matricula/email
         And quando eu adicionar minha Senha inválida
-        When eu clicar no botão login
+        When eu Clicar no botão login
         Then vou receber uma mensagem de erro, e nao vou entar no sistema
+
+    Scenario:' Login com  campos da senha vazios'
+        Given que eu esteja na tela de login
+        And quando eu não coloco a matricula/email
+        And nao colocar a senha 
+        When quando eu Clicar no Botão login
+        Then vou receber uma menssagem de campo obrigatorio e nao vou entrar no sistema
