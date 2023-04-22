@@ -2,7 +2,7 @@ Feature: Editar Perfil
 
     Eu como usuario já cadastrado
     preciso ter acesso ao Perfil
-    Para poder editar minhas informaçoes Pessoais
+    Para poder editar minhas informações Pessoais
 
     Scenario:'Editar Matrícula'
         Given que eu esteja na Tela de Editar Perfil

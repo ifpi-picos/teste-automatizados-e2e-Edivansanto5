@@ -10,12 +10,6 @@ test('Login no sistema com matricula/email e senha já com cadastros', async ({ 
    await page.waitForTimeout(2000)
    await page.getByPlaceholder('Usuário').click();
    await page.waitForTimeout(2000)
-   await page.getByPlaceholder('Usuário').fill('2020fisica2020');
-   await page.waitForTimeout(2000)
-   await page.getByPlaceholder('Senha').click();
-   await page.waitForTimeout(2000)
-   await page.getByPlaceholder('Senha').fill('fisica2020');
-   await page.waitForTimeout(2000)
    await page.getByRole('button', { name: 'Login' }).click();
    await page.waitForTimeout(2000)
    await page.getByPlaceholder('Usuário').click();
@@ -27,7 +21,7 @@ test('Login no sistema com matricula/email e senha já com cadastros', async ({ 
    await page.getByPlaceholder('Senha').fill('06111994');
    await page.waitForTimeout(2000)
    await page.getByRole('button', { name: 'Login' }).click();
-   
+   await page.screenshot({ path: 'Tela de login com sucesso.png' });
  
 });
 
